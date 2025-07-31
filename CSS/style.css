@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background: radial-gradient(circle at top, #fdf6f0, #e8d8c3);
+    color: #2f2f2f;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
+    opacity: 0.03;
+    z-index: -2;
+    animation: cloudDrift 180s linear infinite;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    opacity: 0.06;
+    z-index: -1;
+}
+@keyframes cloudDrift {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* Floating Menu Button */
+    #menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      color: #fff;
+      border: 0px;
+      
+      width: 52px;
+      height: 52px;
+      font-size: 1.4rem;
+      z-index: 9999;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    /* #menu-toggle:active,
+    #menu-toggle:hover{
+        color: black;
+    } */
+    #menu-color{
+      position: fixed;
+      top: 21px; 
+      right: 19px;
+      background: none;
+      color: #000;
+      border: 0px;
+      width: 52px;
+      height: 52px;
+      font-size: 1.4rem;
+      z-index: 9999;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 250px;
+      height: 100%;
+      background-color: #f5eee6;
+      box-shadow: -4px 0 25px rgba(0,0,0,0.15);
+      padding: 2rem;
+      transition: right 0.4s ease-in-out;
+      z-index: 9998;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    .side-menu h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;     
+      color: #a67c52;
+      padding-top: 50px;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e1d4c7;
+      padding-bottom: 0.5rem;
+    }
+
+    .side-menu a {
+      display: block;
+      margin: 1rem 0;
+      color: #3a322f;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+    }
+    .side-menu a:hover,
+    .side-menu a:active {
+      color: #a67c52;
+      font-size: 1.1rem;
+      font-weight: bold;
+      
+    }
+
+    @media screen and (max-width: 600px) {
+      .side-menu {
+        width: 200px;
+        padding: 1.5rem;
+      }
+    }
+    
+header {
+    background: linear-gradient(to right, #f5eee2, #e4d4bd);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+header img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 4px #e0d4c5);
+    animation: imageZoomFloat 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transform-origin: center;  
+}
+@keyframes imageZoomFloat {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(0.9) translateY(0);
+    }
+}
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #5a4634;
+    text-shadow: 2px 2px 4px #e0d4c5;
+    animation: textFloatZoom 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    transform-origin: center;
+}
+@keyframes textFloatZoom {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+header p {
+    font-size: 1.4rem;
+    color: #7e6a55;
+margin-top: 0.5rem;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    animation: fadeInUp 1.5s ease-out;   
+}
+.service {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    height: 400px;
+    padding: 2.5rem;
+    border-left: 6px solid #bda286;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    animation: fadeInUp 1.5s ease-out;
+    cursor: pointer;
+}
+
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('../assets/Gift_Pack.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    transition: opacity 0.6s ease;
+}
+
+.service::after {
+    content: "✨";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.3rem;
+    z-index: 3;
+    animation: twinkle 2.5s infinite;
+}
+#presence-service {
+    background-image: url("../assets/Presence_Sessions.png");
+}
+#memory-rituals {
+    background-image: url("../assets/Memory_Rituals.jpg");
+}
+#emotional-transference {
+    background-image: url("../assets/Emotional_Transference.jpg");
+}
+#invisible-presence {
+    background-image: url("../assets/Invisible_Presence.jpg");
+}
+#gratitude-shadows {
+    background-image: url("../assets/Gratitude_Shadows.jpg");
+}
+
+.service h2,
+.service p {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: #ee7f30;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.service p {
+    font-size: 1.1rem;
+    color: #e0bfa3;
+}
+
+.service:hover::before {
+    opacity: 0;
+}
+
+.service:hover h2,
+.service:hover p {
+    opacity: 1;
+}
+
+.service:hover {
+    transform: translateY(-8px) rotateX(3deg);
+}
+
+.button {
+    background: linear-gradient(to right, #cdb08a, #a98c6d);
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+}
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+.button:hover::before {
+    left: 130%;
+}
+.button:hover {
+    background: #a88b6f;
+    transform: scale(1.05);
+}
+#gratitude-message {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    color: #7e6a55;
+    min-height: 2rem;
+    transition: opacity 0.6s ease;
+}
+    
+#gratitude-message {
+    margin-top: 1.2rem;
+    font-style: italic;
+    color: #4a3a2b;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.appointment-container {
+    background-color: #f3e9e0;
+    padding: 2.5rem;
+    border-left: 6px solid #bda286;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    margin-top: 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.appointment-container::before {
+  content: "🕊️";
+  position: absolute;
+  top: -2.2rem;
+  left: 1rem;
+  font-size: 2.5rem;
+}
+
+.sub-title {
+  font-family: 'Playfair Display', serif;
+  color: #4d3b2f;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.appointment-container a {
+  color: #6b5849;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  width: 60px;
+}
+
+.appointment-container a:hover {
+  text-decoration: underline;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: #6b5849;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #bda286;
+}
+footer {
+    text-align: center;
+    padding: 0.3rem 0.3rem;
+    /* background: #f1e8dc; */
+    font-size: 1rem;
+    color: #7a6f61;
+    border-top: 0.5px solid #e0d4c5;
+    letter-spacing: 0.5px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+}

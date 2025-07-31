@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Session | The Soul Steward</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../CSS/book.css">
+  <link rel="stylesheet" href="../CSS/menu.css">
+</head>
+<body>
+
+  <!-- Menu Toggle Button -->
+  <button id="menu-toggle" onclick="toggleMenu()" aria-label="Open Navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Side Navigation -->
+  <nav class="side-menu" id="sideMenu">
+    <button id="menu-color" onclick="toggleMenu()" aria-label="Close Navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <h2>Soul Steward</h2>
+    <a href="../index.html">Home</a>
+    <a href="inspired.html">Inspired By</a>
+    <a href="alchemy.html">Alchemy</a>
+    <a href="behindveil.html">Behind the Veil</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="book.html" class="active">Book</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="booking-hero">
+    <h1>Book Your Soul Steward Session</h1>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <form id="bookingForm">
+      <input type="hidden" name="access_key" value="1a55ce3e-1e75-4a8a-bf1c-e9963be86bf4">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Full Name" required>
+
+      <label for="number">Contact Number</label>
+      <input type="tel" id="number" name="Contact number" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email Address" required>
+
+      <label for="session">Choose Your Session</label>
+      <select id="session" name="Session Type" required>
+        <option value="Presence Ritual">Presence Ritual</option>
+        <option value="Emotional Transference">Emotional Transference</option>
+        <option value="Memory Ritual">Memory Ritual</option>
+        <option value="Divine Touch (Private)">Divine Touch (Private)</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="Preferred Date" required>
+
+      <label for="note">Anything We Should Know?</label>
+      <textarea id="note" name="Additional Notes" rows="4"></textarea>
+
+      <button type="submit" class="submit-button">Book Session</button>
+    </form>
+  </section>
+
+  <!-- Modal Confirmation -->
+  <div class="modal" id="thankYouModal">
+    <div class="modal-content">
+      <h2>Thank you for your booking.</h2>
+      <p>Your sacred request has been received. We'll be in touch soon.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 The Soul Steward – A time awaits you.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../JavaScript/menu.js"></script>
+  <script src="../JavaScript/book.js"></script>
+</body>
+</html>

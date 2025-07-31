@@ -1,0 +1,38 @@
+/* Image Grid: Consistent two-column layout at all screen sizes */
+.image-grid {
+  flex: 1 1 40%;
+  min-width: 320px; /* Prevent grid from becoming too narrow */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 120px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform;
+  cursor: zoom-in; /* or pointer */
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive behavior: only change container layout, not grid */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding-top: 120px;
+  }
+
+  .image-grid {
+    width: 100%; /* Stretch grid full width when stacked */
+    margin-top: 60px;
+  }
+}

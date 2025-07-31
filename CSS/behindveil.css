@@ -1,0 +1,57 @@
+ .veil-hero {
+      background: url('../assets/menu/veil-hero.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f5f0ec;
+      font-family: 'Cormorant Garamond', serif;
+      padding: 0 1rem;
+    }
+
+    .veil-hero h1 {
+      font-size: 3.2rem;
+      max-width: 800px;
+      text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      animation: fadeUp 1.8s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+    }
+
+    .veil-section {
+      padding: 5rem 2rem;
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .veil-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-top: 3rem;
+      color: #a67c52;
+    }
+
+    .signature {
+      margin-top: 4rem;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: #6e5d54;
+      text-align: end;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #7a6c64;
+      border-top: 1px solid #e4d9ce;
+      background: #fdf9f6;
+    }

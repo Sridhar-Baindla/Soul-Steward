@@ -1,0 +1,75 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf7;
+      color: #333;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 40px;
+      left: 40px;
+      background-color: #fff;
+      color: #ee7f30;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1100;
+      /* font-weight: bold; */
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ee7f30;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      padding-top: 100px;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Container wrapping content and image grid */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(2rem, 4vw, 4rem); /* space between content and image grid */
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-top: clamp(60px, 10vw, 120px);
+    }
+
+    /* Ensure content takes appropriate space */
+    .content {
+      flex: 1 1 50%;
+      min-width: 300px;
+    }
+    
+    .text-section {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-section h2 {
+      font-size: 2.5rem;
+      color: #ee7f30;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    

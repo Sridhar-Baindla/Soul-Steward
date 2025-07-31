@@ -1,0 +1,45 @@
+/* Image grid: Always consistent across screen sizes */
+.image-grid {
+  flex: 1 1 40%;
+  min-width: 360px; /* Prevents shrinking too much */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always two columns */
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+  margin-top: clamp(60px, 10vw, 120px);
+}
+
+/* Image styles */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Last image spans full width across grid */
+.image-grid img:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Responsive behavior: Only container layout changes */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding-top: 140px;
+  }
+
+  .image-grid {
+    width: 100%;
+    margin-top: clamp(60px, 8vw, 100px);
+  }
+}

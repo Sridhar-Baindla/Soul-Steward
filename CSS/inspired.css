@@ -1,0 +1,107 @@
+/* Hero Section with Background */
+.inspired-hero {
+  position: relative;
+  background-image: url('../assets/menu/inspired-hero.jpg');
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f5f0ec;
+  font-family: 'Cormorant Garamond', serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.inspired-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 5, 0.45); /* soft dark overlay */
+  z-index: 1;
+}
+
+.inspired-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  max-width: 900px;
+  padding: 0 1rem;
+  text-shadow: 1px 1px 18px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inspired-section {
+  padding: 5rem 2rem;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  background: #fff8f1;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #6d3c2d;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #3c2b26;
+}
+
+.letter {
+  border-left: 3px solid #ddb892;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #5a3e36;
+  background: #fcf6ef;
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.cta a {
+  background-color: #a67b5b;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta a:hover {
+  background-color: #8c6147;
+  transform: translateY(-2px);
+}

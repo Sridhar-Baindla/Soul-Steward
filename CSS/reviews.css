@@ -1,0 +1,64 @@
+ .review-hero {
+      background: url('../assets/menu/review-hero.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f5f0ec;
+      font-family: 'Cormorant Garamond', serif;
+      padding: 0 1rem;
+    }
+
+    .review-hero h1 {
+      font-size: 3rem;
+      max-width: 800px;
+      text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      animation: fadeUp 1.8s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+    }
+
+    .testimonials {
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 3px solid #a67c52;
+      background: #fffaf6;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    }
+
+    .author {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      color: #7c675b;
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #7a6c64;
+      border-top: 1px solid #e4d9ce;
+      background: #fdf9f6;
+    }
+    @media screen and (max-width: 600px) {
+      .side-menu { width: 200px; padding: 1.5rem; }
+    }

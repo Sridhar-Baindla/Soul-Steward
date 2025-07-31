@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul Steward</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Menu Toggle Button -->
+<button id="menu-toggle" onclick="toggleMenu()" aria-label="Open Navigation">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Responsive Side Menu -->
+<nav class="side-menu" id="sideMenu">
+  <button id="menu-color" onclick="toggleMenu()" aria-label="Open Navigation">
+  <i class="fas fa-bars"></i>
+</button>
+  <h2>Soul Steward</h2>
+  <a href="index.html">Home</a>
+  <a href="./HTML/inspired.html">Inspired By</a>
+  <a href="./HTML/alchemy.html">Alchemy</a>
+  <a href="./HTML/behindveil.html">Behind the Veil</a>
+  <a href="./HTML/reviews.html">Reviews</a>
+  <a href="./HTML/book.html">Book</a>
+  
+</nav>
+
+
+  <header>
+    <img src="../assets/logo.png" alt="Soul Steward Logo">
+    <h1>Soul Steward</h1>
+    <p>A Private Emotional Concierge for Deep Healing</p>
+  </header>
+
+  <section>
+    <div class="service" id="presence-service" onclick="navigateToPresence()">
+      <h2>Presence Sessions</h2>
+      <p>Silent companionship in shared spaces—no goal, no conversation, just healing stillness.</p>
+    </div>
+    <div class="service" id="memory-rituals" onclick="navigateToMemory()">
+      <h2>Memory Rituals</h2>
+      <p>Rituals that honor your emotional past—letters, symbols, or gentle ceremonies.</p>
+    </div>
+    <div class="service" id="emotional-transference" onclick="navigateToEmotional()">
+      <h2>Emotional Transference Objects</h2>
+      <p>Handcrafted natural objects that absorb unspoken emotions, to be kept or released.</p>
+    </div>
+    <div class="service" id="invisible-presence" onclick="navigateToInvisible()">
+      <h2>Invisible Presence</h2>
+      <p>Companionship without demand—just a quiet, steady presence nearby.</p>
+    </div>
+    <div class="service" id="gratitude-shadows" onclick="navigateToGratitude()">
+      <h2>Gratitude Shadows</h2>
+      <p>Small surprises of beauty and kindness left behind to warm the soul.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button class="button" onclick="showGratitude()">Receive a Gratitude Shadow</button>
+      <p id="gratitude-message"></p>
+    </div>
+
+    <div class="appointment-container">
+      <h2 class="sub-title">Request a Silent Appointment</h2>
+      <a href="mailto:soulstewardofficial@gmail.com" target="_blank" aria-label="Soul Steward on E-Mail" class="social-link">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/soulsteward/?hl=en" target="_blank" aria-label="Soul Steward on Instagram" class="social-link">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 The Soul Steward. Presence is the luxury.
+  </footer>
+  <script src="../JavaScript/script.js"></script>
+</body>
+</html>

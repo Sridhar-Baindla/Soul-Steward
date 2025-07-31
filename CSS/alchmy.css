@@ -1,0 +1,67 @@
+.alchemy-hero {
+      background: url('../assets/menu/alchemy-hero.png') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f5f0ec;
+      font-family: 'Cormorant Garamond', serif;
+      padding: 0 1rem;
+      width: 100%;
+    }
+
+    .alchemy-hero h1 {
+      font-size: 3.2rem;
+      max-width: 800px;
+      text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      animation: fadeUp 1.8s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+    }
+
+    .alchemy-section {
+      padding: 5rem 2rem;
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .alchemy-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-top: 3rem;
+      color: #a67c52;
+    }
+
+    .rituals-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .rituals-list li {
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+    }
+
+    .moon-calendar {
+      margin-top: 3rem;
+      background: #fffaf6;
+      padding: 1.5rem;
+      border-left: 4px solid #a67c52;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .moon-calendar h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #8a6945;
+    }
